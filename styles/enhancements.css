@@ -1,0 +1,352 @@
+/* ============================================
+   PROFESSIONAL ENHANCEMENTS FOR WEB DEVELOPER
+   ============================================ */
+
+/* Smooth Page Transitions */
+body {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Code Text Styling for Developer Portfolio */
+.code-text {
+  font-family: 'Courier New', Courier, monospace;
+  background: rgba(165, 39, 214, 0.1);
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: var(--primary-color);
+}
+
+/* Enhanced Button Hover with Scale */
+.button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(165, 39, 214, 0.3);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--tertiary-color));
+  z-index: 10000000;
+  transition: width 0.1s ease;
+}
+
+/* Enhanced Project Cards with 3D Effect */
+.projects__project {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects__project:hover {
+  transform: translateY(-5px);
+}
+
+/* Skills Section - Add Progress Bars */
+.skill-progress {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.skill-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  border-radius: 2px;
+  transition: width 1s ease-in-out;
+  width: 0;
+}
+
+.skill-progress-bar.animate {
+  width: var(--progress-width);
+}
+
+/* Enhanced Nav Link Underline Animation */
+.nav__desktop-links a {
+  position: relative;
+}
+
+.nav__desktop-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  transition: width 0.3s ease;
+}
+
+.nav__desktop-links a:hover::after {
+  width: 100%;
+}
+
+/* Typing Effect Enhancement */
+#typed {
+  position: relative;
+}
+
+#typed::after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  width: 2px;
+  height: 100%;
+  background: var(--primary-color);
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Contact Form Enhancement */
+.contact__form input,
+.contact__form textarea {
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.contact__form input:focus,
+.contact__form textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 20px rgba(165, 39, 214, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Code Block Styling (if you want to add code snippets) */
+.code-block {
+  background: #1e1e1e;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 4px solid var(--primary-color);
+  overflow-x: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.code-block code {
+  font-family: 'Courier New', Courier, monospace;
+  color: #d4d4d4;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Gradient Text for Headers */
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--tertiary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Social Icons Bounce Effect */
+.nav__desktop-socials a,
+.sidebar-mobile__item {
+  transition: transform 0.3s ease;
+}
+
+.nav__desktop-socials a:hover,
+.sidebar-mobile__item:hover {
+  transform: translateY(-3px);
+}
+
+/* Project Tech Stack Icons Animation */
+.all-skills__icon {
+  transition: all 0.3s ease;
+}
+
+.all-skills__icon:hover {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 8px 20px rgba(165, 39, 214, 0.3);
+}
+
+/* Loading Animation Enhancement */
+#loader {
+  backdrop-filter: blur(10px);
+  background: rgba(13, 5, 20, 0.95);
+}
+
+/* Floating Animation for Astronaut */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.hero__astronaut {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Particle Effect for Background */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.6;
+  animation: particleFloat 15s infinite;
+}
+
+@keyframes particleFloat {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(100px, -1000px);
+    opacity: 0;
+  }
+}
+
+/* Enhanced Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0831;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+  border-radius: 10px;
+  border: 2px solid #0A0831;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--secondary-color), var(--primary-color));
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 5px 20px rgba(165, 39, 214, 0.4);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(165, 39, 214, 0.6);
+}
+
+.back-to-top i {
+  color: white;
+  font-size: 20px;
+}
+
+/* Responsive Enhancements */
+@media screen and (max-width: 768px) {
+  .gradient-text {
+    font-size: 2rem;
+  }
+  
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Print Styles for Resume */
+@media print {
+  .nav, .sidebar-mobile, .back-to-top, #loader {
+    display: none !important;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .projects__project {
+    page-break-inside: avoid;
+  }
+}
+
+/* Accessibility - Focus Styles */
+a:focus, button:focus, input:focus, textarea:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .button {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Reduce Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

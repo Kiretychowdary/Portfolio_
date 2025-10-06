@@ -3,16 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio of Renas Hassan" />
-    <title>Renas Hassan - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
+    <meta name="description" content="Kirety - Full Stack Web Developer specializing in React, Node.js, AI/ML integration. Building modern, responsive web applications with cutting-edge technologies." />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="keywords" content="Full Stack Developer, Web Developer, React, Node.js, JavaScript, Portfolio, AI Integration, MongoDB, Express" />
+    <meta name="author" content="Kirety" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kiretychowdary.github.io/Portfolio_/" />
+    <meta property="og:title" content="Kirety - Full Stack Web Developer" />
+    <meta property="og:description" content="Building modern web applications with React, Node.js, and AI/ML integration" />
+    <meta property="og:image" content="./assets/images/logo2.png" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://kiretychowdary.github.io/Portfolio_/" />
+    <meta property="twitter:title" content="Kirety - Full Stack Web Developer" />
+    <meta property="twitter:description" content="Building modern web applications with React, Node.js, and AI/ML integration" />
+    <meta property="twitter:image" content="./assets/images/logo2.png" />
+    
+    <title>Kirety - Full Stack Web Developer | React, Node.js, AI/ML</title>
     <link rel="shortcut icon" href="./assets/images/logo2.png" />
-    <link rel="stylesheet" href="/styles/styles.css" />
+    <meta name="theme-color" content="#0D0514" />
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+    
+    <!-- Main JavaScript Module -->
     <script type="module" src="./javascript/index.js"></script>
-    <script async src="https://cdn.splitbee.io/sb.js"></script>
   </head>
 
   <body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+    
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+    
     <div id="loader" class="zoomIn">
       <div class="spinner-box">
         <div class="blue-orbit leo"></div>
@@ -60,26 +95,29 @@
             <article class="nav__desktop-socials">
               <a
                 class="link hidden fromTop"
-                href="https://se.linkedin.com/in/renas-hassan-9b248b186"
+                href="https://www.linkedin.com/in/kirety-manne-954045297"
                 target="_blank"
-                aria-label="LinkedIn"
-                title="LinkedIn"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn Profile"
+                title="Connect on LinkedIn"
                 ><i class="fa-brands fa-linkedin"></i
               ></a>
               <a
                 class="link hidden fromTop"
-                href="https://www.facebook.com/Renash97"
+                href="https://facebook.com/yourprofile"
                 target="_blank"
-                aria-label="Facebook"
-                title="Facebook"
+                rel="noopener noreferrer"
+                aria-label="Facebook Profile"
+                title="Follow on Facebook"
                 ><i class="fa-brands fa-facebook"></i
               ></a>
               <a
                 class="link hidden fromTop"
-                href="https://github.com/meganide"
+                href="https://github.com/Kiretychowdary"
                 target="_blank"
-                aria-label="Github"
-                title="Github"
+                rel="noopener noreferrer"
+                aria-label="Github Profile"
+                title="View GitHub Projects"
                 ><i class="fa-brands fa-github"></i
               ></a>
             </article>
@@ -106,17 +144,17 @@
             <a class="sidebar-mobile__item mobile-skills" href="#skills"><i class="fa-solid fa-code"></i> Skills</a>
           </li>
           <li>
-            <a class="sidebar-mobile__item" href="https://se.linkedin.com/in/renas-hassan-9b248b186" target="_blank"
+            <a class="sidebar-mobile__item" href="https://www.linkedin.com/in/kirety-manne-954045297" target="_blank" rel="noopener noreferrer"
               ><i class="fa-brands fa-linkedin"></i>LinkedIn</a
             >
           </li>
           <li>
-            <a class="sidebar-mobile__item" href="https://www.facebook.com/Renash97" target="_blank"
+            <a class="sidebar-mobile__item" href="https://facebook.com/kirety.manne" target="_blank" rel="noopener noreferrer"
               ><i class="fa-brands fa-facebook"></i> Facebook</a
             >
           </li>
           <li>
-            <a class="sidebar-mobile__item" href="https://github.com/meganide" target="_blank"
+            <a class="sidebar-mobile__item" href="https://github.com/Kiretychowdary" target="_blank" rel="noopener noreferrer"
               ><i class="fa-brands fa-github"></i> Github</a
             >
           </li>
@@ -126,7 +164,7 @@
             >
           </li>
           <li>
-            <a class="sidebar-mobile__item mobile-contact" href="./assets/cv.pdf" target="_blank"
+            <a class="sidebar-mobile__item mobile-contact" href="./assets/Kirety_Manne.pdf" target="_blank"
               ><i class="fa-solid fa-file"></i> Resume</a
             >
           </li>
@@ -143,7 +181,7 @@
               <section class="hero">
                 <section class="hero__left">
                   <section class="hero__heading-background prevent-select link hidden fromTop">
-                    <h1 class="hero__heading">Hi, I'm Renas!</h1>
+                    <h1 class="hero__heading">Hi, I'm Kirety!</h1>
                   </section>
                   <div id="typed-strings">
                     <p>A <span class="hero__fullstack">Fullstack</span> Web Developer</p>
@@ -275,30 +313,18 @@
                   </video>
                 </article>
                 <section class="projects__info tweeter">
-                  <h3 class="projects__title">TWEETER</h3>
+                  <h3 class="projects__title">ACEMYINTERVIEW</h3>
                   <p class="projects__paragraph">
-                    Tweeter is a full-stack social media application that is heavily inspired by Twitter. The
-                    application boasts a comprehensive feature set, including full CRUD functionality and responsive
-                    design for all screen sizes.
+                    AceMyInterview is an AI-powered interview preparation platform featuring real-time speech recognition, 
+                    intelligent answer evaluation, and personalized feedback. Users can practice with AI-generated questions 
+                    tailored to their target role and industry, track their progress, and improve their interview skills.
                   </p>
                   <section class="all-skills__icons all-skills__icons--small">
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon ts">
-                        <img src="./assets/images/icons/typescript.svg" alt="typescript" loading="lazy" />
-                      </article>
-                      <p>Typescript</p>
-                    </section>
                     <section class="all-skills__container">
                       <article class="all-skills__icon react">
                         <img src="./assets/images/icons/react.svg" alt="react" loading="lazy" />
                       </article>
                       <p>React</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon mysql">
-                        <img src="./assets/images/icons/mysql.svg" alt="mysql" loading="lazy" />
-                      </article>
-                      <p>MySQL</p>
                     </section>
                     <section class="all-skills__container">
                       <article class="all-skills__icon node">
@@ -313,16 +339,28 @@
                       <p>ExpressJS</p>
                     </section>
                     <section class="all-skills__container">
-                      <article class="all-skills__icon socket">
+                      <article class="all-skills__icon mongodb">
+                        <img src="./assets/images/icons/mongodb.svg" alt="mongodb" loading="lazy" />
+                      </article>
+                      <p>MongoDB</p>
+                    </section>
+                    <section class="all-skills__container">
+                      <article class="all-skills__icon python">
+                        <img src="./assets/images/icons/python.svg" alt="python" loading="lazy" />
+                      </article>
+                      <p>Python</p>
+                    </section>
+                    <section class="all-skills__container">
+                      <article class="all-skills__icon tailwind">
                         <img src="./assets/images/icons/tailwind.svg" alt="tailwind" loading="lazy" />
                       </article>
                       <p>Tailwind</p>
                     </section>
                     <section class="all-skills__container">
-                      <article class="all-skills__icon socket">
-                        <img src="./assets/images/icons/prisma.svg" alt="prisma" loading="lazy" />
+                      <article class="all-skills__icon api">
+                        <img src="./assets/images/icons/api.svg" alt="ai-api" loading="lazy" />
                       </article>
-                      <p>Prisma</p>
+                      <p>AI/ML API</p>
                     </section>
                   </section>
                   <details class="projects__demo-acc">
@@ -330,14 +368,14 @@
                       <span>👇</span>
                       Demo Account
                     </summary>
-                    <p>Email: test@gmail.com</p>
-                    <p>Password: test</p>
+                    <p>Email: demo@acemyinterview.com</p>
+                    <p>Password: demo123</p>
                   </details>
                   <section class="projects__buttons">
-                    <a href="https://tweeter-ps0r.onrender.com/login" target="_blank" rel="noopener noreferrer">
+                    <a href="https://aiksvid.netlify.app" target="_blank" rel="noopener noreferrer">
                       <button class="button">Demo</button>
                     </a>
-                    <a href="https://github.com/meganide/Tweeter" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/Kiretychowdary/AceMyInterview" target="_blank" rel="noopener noreferrer">
                       <button class="button">Code</button>
                     </a>
                   </section>

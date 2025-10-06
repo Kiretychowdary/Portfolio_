@@ -1,0 +1,234 @@
+/* ============================================
+   FOOTBALL CURSOR - AWESOME INTERACTIVE CURSOR
+   ============================================ */
+
+/* Hide default cursor */
+body {
+  cursor: none;
+}
+
+/* Clickable elements show pointer indication */
+a, button, input, textarea, select, .clickable {
+  cursor: none;
+}
+
+/* Football Cursor */
+.football-cursor {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+  mix-blend-mode: difference;
+}
+
+/* Football ball design using CSS */
+.football-ball {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 30% 30%, #ffffff 0%, #f0f0f0 25%, #e0e0e0 50%, #333333 100%);
+  border-radius: 50%;
+  box-shadow: 
+    inset -5px -5px 10px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 10px rgba(255, 255, 255, 0.3),
+    0 0 15px rgba(165, 39, 214, 0.6),
+    0 0 30px rgba(87, 223, 121, 0.4);
+  animation: footballRotate 2s linear infinite;
+}
+
+/* Pentagon pattern on football */
+.football-ball::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 40%;
+  background: #1a1a1a;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+/* Hexagon pattern */
+.football-ball::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 30%;
+  height: 30%;
+  background: #1a1a1a;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+/* Football Trail Effect */
+.football-trail {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(165, 39, 214, 0.6), rgba(87, 223, 121, 0.3));
+  pointer-events: none;
+  z-index: 9999;
+  animation: trailFade 0.6s ease-out forwards;
+}
+
+/* Cursor Border Ring */
+.football-cursor-ring {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(165, 39, 214, 0.8);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: ringPulse 2s ease-in-out infinite;
+}
+
+/* Hover state - Make cursor bigger */
+.football-cursor.hover {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.football-cursor-ring.hover {
+  width: 70px;
+  height: 70px;
+  border-color: rgba(87, 223, 121, 1);
+  border-width: 3px;
+}
+
+/* Click state - Squash effect */
+.football-cursor.click {
+  animation: footballKick 0.3s ease-out;
+}
+
+/* Rotation Animation */
+@keyframes footballRotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Trail fade animation */
+@keyframes trailFade {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+}
+
+/* Ring pulse animation */
+@keyframes ringPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.7;
+  }
+}
+
+/* Football kick animation */
+@keyframes footballKick {
+  0% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+  30% {
+    transform: translate(-50%, -50%) scale(0.8) rotate(15deg);
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(1.3) rotate(-10deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+}
+
+/* Sparkle effect on click */
+.football-sparkle {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9997;
+  animation: sparkleAnimation 0.8s ease-out forwards;
+}
+
+@keyframes sparkleAnimation {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--sparkle-x), var(--sparkle-y)) scale(0);
+  }
+}
+
+/* Text selection with football cursor */
+::selection {
+  background: rgba(165, 39, 214, 0.3);
+  color: white;
+}
+
+/* Mobile - Restore default cursor */
+@media (hover: none) and (pointer: coarse) {
+  body, a, button, input, textarea, select {
+    cursor: auto;
+  }
+  
+  .football-cursor,
+  .football-cursor-ring,
+  .football-trail,
+  .football-sparkle {
+    display: none !important;
+  }
+}
+
+/* Reduce motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .football-ball {
+    animation: none;
+  }
+  
+  .football-cursor-ring {
+    animation: none;
+  }
+  
+  .football-trail {
+    display: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .football-ball {
+    border: 2px solid white;
+    box-shadow: 0 0 5px black;
+  }
+  
+  .football-cursor-ring {
+    border-color: white;
+    border-width: 3px;
+  }
+}
