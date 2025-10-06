@@ -22,8 +22,15 @@
 }
 
 .nav__img {
-  height: 1.875rem;
-  width: 1.875rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
+}
+
+.nav__img:hover {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.8));
 }
 
 .nav__hamburger-icon,

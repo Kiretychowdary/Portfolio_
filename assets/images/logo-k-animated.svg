@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <!-- Animated gradient for the ring -->
+    <linearGradient id="animRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ffff;stop-opacity:1">
+        <animate attributeName="stop-color" values="#00ffff;#00d4ff;#00ffff" dur="3s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="30%" style="stop-color:#00d4ff;stop-opacity:1">
+        <animate attributeName="stop-color" values="#00d4ff;#0099ff;#00d4ff" dur="3s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="70%" style="stop-color:#0099ff;stop-opacity:1">
+        <animate attributeName="stop-color" values="#0099ff;#0066ff;#0099ff" dur="3s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#0066ff;stop-opacity:1">
+        <animate attributeName="stop-color" values="#0066ff;#00ffff;#0066ff" dur="3s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <!-- Animated gradient for K letter -->
+    <linearGradient id="animLetter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ffff;stop-opacity:1">
+        <animate attributeName="stop-color" values="#00ffff;#ffffff;#00ffff" dur="2s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#00ccff;stop-opacity:1">
+        <animate attributeName="stop-color" values="#00ccff;#00ffff;#00ccff" dur="2s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#0099ff;stop-opacity:1">
+        <animate attributeName="stop-color" values="#0099ff;#00ccff;#0099ff" dur="2s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <!-- Radial gradient for background -->
+    <radialGradient id="animBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0a0a0f;stop-opacity:1"/>
+    </radialGradient>
+    
+    <!-- Pulsing glow effect -->
+    <filter id="pulseGlow">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur">
+        <animate attributeName="stdDeviation" values="5;10;5" dur="2s" repeatCount="indefinite"/>
+      </feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Strong outer glow -->
+    <filter id="superGlow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur">
+        <animate attributeName="stdDeviation" values="8;15;8" dur="2.5s" repeatCount="indefinite"/>
+      </feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background circle with gradient -->
+  <circle cx="150" cy="150" r="145" fill="url(#animBg)"/>
+  
+  <!-- Pulsing outer glow rings -->
+  <circle cx="150" cy="150" r="135" fill="none" stroke="url(#animRing)" stroke-width="2" filter="url(#superGlow)">
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="150" cy="150" r="135" fill="none" stroke="url(#animRing)" stroke-width="2" filter="url(#superGlow)">
+    <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Main ring with pulsing glow -->
+  <circle cx="150" cy="150" r="135" fill="none" stroke="url(#animRing)" stroke-width="5" filter="url(#pulseGlow)">
+    <animate attributeName="stroke-width" values="5;6;5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Inner ring for depth -->
+  <circle cx="150" cy="150" r="130" fill="none" stroke="#000" stroke-width="3" opacity="0.3"/>
+  
+  <!-- Letter K - Animated design -->
+  <g filter="url(#pulseGlow)">
+    <!-- Main vertical bar with pulse -->
+    <rect x="85" y="75" width="18" height="150" fill="url(#animLetter)" rx="3">
+      <animate attributeName="opacity" values="1;0.85;1" dur="1.5s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Upper diagonal with pulse -->
+    <polygon points="103,115 103,130 190,80 190,65" fill="url(#animLetter)">
+      <animate attributeName="opacity" values="1;0.85;1" dur="1.5s" begin="0.2s" repeatCount="indefinite"/>
+    </polygon>
+    
+    <!-- Lower diagonal with pulse -->
+    <polygon points="103,170 103,185 190,235 190,220" fill="url(#animLetter)">
+      <animate attributeName="opacity" values="1;0.85;1" dur="1.5s" begin="0.4s" repeatCount="indefinite"/>
+    </polygon>
+    
+    <!-- Inner glow on K with pulse -->
+    <rect x="85" y="75" width="18" height="150" fill="none" stroke="#ffffff" stroke-width="1" rx="3">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <polygon points="103,115 103,130 190,80 190,65" fill="none" stroke="#ffffff" stroke-width="1">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" begin="0.3s" repeatCount="indefinite"/>
+    </polygon>
+    <polygon points="103,170 103,185 190,235 190,220" fill="none" stroke="#ffffff" stroke-width="1">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+  
+  <!-- Rotating shine effect on ring -->
+  <circle cx="150" cy="150" r="135" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.6" stroke-dasharray="50,400" stroke-linecap="round">
+    <animateTransform attributeName="transform" type="rotate" from="0 150 150" to="360 150 150" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Pulsing accent dots around ring -->
+  <circle cx="150" cy="15" r="3" fill="#00ffff" filter="url(#pulseGlow)">
+    <animate attributeName="r" values="3;5;3" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="285" cy="150" r="3" fill="#00ccff" filter="url(#pulseGlow)">
+    <animate attributeName="r" values="3;5;3" dur="1.5s" begin="0.375s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" begin="0.375s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="150" cy="285" r="3" fill="#0099ff" filter="url(#pulseGlow)">
+    <animate attributeName="r" values="3;5;3" dur="1.5s" begin="0.75s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" begin="0.75s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="15" cy="150" r="3" fill="#0066ff" filter="url(#pulseGlow)">
+    <animate attributeName="r" values="3;5;3" dur="1.5s" begin="1.125s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" begin="1.125s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Pulsing technical grid lines -->
+  <g opacity="0.4">
+    <line x1="150" y1="20" x2="150" y2="35" stroke="#00ffff" stroke-width="1.5">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="150" y1="265" x2="150" y2="280" stroke="#00ffff" stroke-width="1.5">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="20" y1="150" x2="35" y2="150" stroke="#00ffff" stroke-width="1.5">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="265" y1="150" x2="280" y2="150" stroke="#00ffff" stroke-width="1.5">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  
+  <!-- Orbiting particles -->
+  <circle r="2" fill="#00ffff" filter="url(#pulseGlow)">
+    <animateMotion dur="6s" repeatCount="indefinite">
+      <mpath href="#orbitPath"/>
+    </animateMotion>
+  </circle>
+  <circle r="2" fill="#00ccff" filter="url(#pulseGlow)">
+    <animateMotion dur="6s" begin="2s" repeatCount="indefinite">
+      <mpath href="#orbitPath"/>
+    </animateMotion>
+  </circle>
+  <circle r="2" fill="#0099ff" filter="url(#pulseGlow)">
+    <animateMotion dur="6s" begin="4s" repeatCount="indefinite">
+      <mpath href="#orbitPath"/>
+    </animateMotion>
+  </circle>
+  
+  <!-- Orbit path (hidden) -->
+  <path id="orbitPath" d="M 150,15 A 135,135 0 1,1 149,15" fill="none" stroke="none"/>
+</svg>
