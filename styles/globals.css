@@ -67,8 +67,7 @@ body {
   max-width: 100%;
   overflow-x: hidden !important;
   color: white;
-  font-family: 'Centra', sans-serif;
-  font-weight: 400;
+  /* Font family now set in typography.css */
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -81,29 +80,25 @@ h2,
 h3,
 h4 {
   color: white;
-  font-size: 48px;
-  font-family: 'QuirkyRobot', sans-serif;
-  font-weight: normal;
+  /* Font styles now handled in typography.css */
 }
 
 h2 {
   margin: 0 auto;
   margin-bottom: 24px;
-  font-size: 4rem;
-  font-weight: 700;
   text-align: center;
-  letter-spacing: .4375rem;
+  /* Font styles now handled in typography.css */
 }
 
 button {
-  font-family: 'Centra', sans-serif;
-  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  /* Font styles now handled in typography.css */
 }
 
 p {
-  font-size: 16px;
+  /* Font styles now handled in typography.css */
   color: rgb(184, 184, 184);
-  line-height: 1.8;
 }
 
 img {

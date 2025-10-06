@@ -21,6 +21,9 @@ import {
   initKeyboardNav,
   initEasterEgg
 } from './advancedFeatures.js';
+import { initCounterAnimation } from './counterAnimation.js';
+import { initThemeToggle } from './themeToggle.js';
+import { initEnhancedHero } from './enhancedHero.js';
 
 async function main() {
   // Initialize awesome football cursor ⚽
@@ -53,6 +56,15 @@ async function main() {
   initSkillBars();
   initKeyboardNav();
   initEasterEgg();
+  
+  // Initialize counter animation
+  initCounterAnimation();
+  
+  // Initialize theme toggle (dark/light mode)
+  initThemeToggle();
+  
+  // Initialize enhanced hero with particles and badges
+  initEnhancedHero();
 }
 
 main();

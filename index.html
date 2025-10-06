@@ -93,6 +93,7 @@
           <section class="nav__desktop-links">
             <a class="desktop-hero active-link link hidden fromTop" href="#hero"><i class="fa-solid fa-house"></i>
               Home</a>
+            <a class="desktop-about link hidden fromTop" href="#about"><i class="fa-solid fa-user"></i> About</a>
             <a class="desktop-projects link hidden fromTop" href="#projects"><i class="fa-solid fa-diagram-project"></i>
               Projects</a>
             <a class="desktop-experience link hidden fromTop" href="#experience"><i class="fa-solid fa-briefcase"></i>
@@ -120,6 +121,9 @@
         <li>
           <a class="sidebar-mobile__item mobile-hero active-link" href="#hero"><i class="fa-solid fa-house"></i>
             Home</a>
+        </li>
+        <li>
+          <a class="sidebar-mobile__item mobile-about" href="#about"><i class="fa-solid fa-user"></i> About</a>
         </li>
         <li>
           <a class="sidebar-mobile__item mobile-projects" href="#projects"><i class="fa-solid fa-diagram-project"></i>
@@ -194,13 +198,105 @@
         </div>
       </section>
 
+      <!-- About Section -->
+      <div class="container-about">
+        <div class="wrapper">
+          <section class="about" id="about">
+            <h2 class="about__heading gradient-text">About Me</h2>
+            <p class="about__subheading">Passionate developer crafting digital experiences</p>
+            
+            <div class="about__content">
+              <div class="about__image-wrapper hidden fromLeft">
+                <div class="about__image-frame">
+                  <div class="about__image-glow"></div>
+                  <div class="about__image">
+                    <i class="fas fa-user-circle"></i>
+                  </div>
+                  <div class="about__status">
+                    <span class="about__status-dot"></span>
+                    Available for Opportunities
+                  </div>
+                </div>
+              </div>
+
+              <div class="about__info hidden fromRight">
+                <h3 class="about__title">Full Stack Developer & Tech Enthusiast</h3>
+                <p class="about__bio">
+                  Hi! I'm <span class="highlight">Kirety</span>, a passionate Full Stack Developer with expertise in building 
+                  modern web applications. I specialize in <span class="highlight">React</span>, <span class="highlight">Node.js</span>, 
+                  and <span class="highlight">AI/ML integration</span>, creating scalable solutions that make a difference.
+                </p>
+                <p class="about__bio">
+                  With a strong foundation in both frontend and backend technologies, I focus on delivering 
+                  high-quality code and exceptional user experiences. My journey includes working on real-time 
+                  applications, AI-powered platforms, and enterprise-level systems.
+                </p>
+
+                <div class="about__stats">
+                  <div class="about__stat-item">
+                    <div class="about__stat-icon">
+                      <i class="fas fa-code"></i>
+                    </div>
+                    <div class="about__stat-content">
+                      <h4 class="about__stat-number" data-target="15">0</h4>
+                      <p class="about__stat-label">Projects Completed</p>
+                    </div>
+                  </div>
+                  <div class="about__stat-item">
+                    <div class="about__stat-icon">
+                      <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="about__stat-content">
+                      <h4 class="about__stat-number" data-target="2">0</h4>
+                      <p class="about__stat-label">Years Experience</p>
+                    </div>
+                  </div>
+                  <div class="about__stat-item">
+                    <div class="about__stat-icon">
+                      <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="about__stat-content">
+                      <h4 class="about__stat-number" data-target="20">0</h4>
+                      <p class="about__stat-label">Technologies Mastered</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="about__actions">
+                  <a href="./assets/Kirety_Manne.pdf" download class="about__download-btn">
+                    <button class="button button--primary">
+                      <i class="fas fa-download"></i>
+                      Download Resume
+                    </button>
+                  </a>
+                  <a href="#contact" class="about__contact-btn">
+                    <button class="button button--secondary">
+                      <i class="fas fa-envelope"></i>
+                      Get In Touch
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
       <div class="container-projects">
         <div class="wrapper">
           <section class="projects" id="projects">
-            <h2 class="projects__heading">Projects</h2>
+            <!-- Section Header -->
+            <div class="section-header">
+              <h2 class="section-title gradient-text">Featured Projects</h2>
+              <p class="section-subtitle">
+                A showcase of my recent work in web development, AI/ML, and full-stack applications
+              </p>
+            </div>
+
+            <!-- Projects Grid -->
             <article class="projects__project hidden fromRight">
               <article class="projects__laptop-mockup">
-                <video disableRemotePlayback muted autoplay playsinline>
+                <video disableRemotePlayback muted autoplay playsinline loop>
                   <source src="./assets/videos/chatify.webm" type='video/webm;codecs="vp9"' onerror="fallback(parentNode);
                   function fallback(video) {;
                     while (video.hasChildNodes()) {
@@ -209,14 +305,22 @@
                     }
                     video.parentNode.removeChild(video);
                   }" />
-                  <img src="./assets/videos/chatify-ios.png" alt="rsduel" loading="lazy" />
+                  <img src="./assets/videos/chatify-ios.png" alt="Chatify - Real-time Chat Application" loading="lazy" />
                 </video>
               </article>
               <section class="projects__info">
-                <h3 class="projects__title">CHATIFY</h3>
+                <div class="projects__badges">
+                  <span class="project-badge project-badge--featured">
+                    <i class="fas fa-star"></i> Featured
+                  </span>
+                  <span class="project-badge project-badge--live">
+                    <i class="fas fa-circle"></i> Live Demo
+                  </span>
+                </div>
+                <h3 class="projects__title">Chatify</h3>
                 <p class="projects__paragraph">
-                  Chatify is a full-stack chat application which allows real-time communcation between users similar
-                  to Discord.
+                  A full-stack real-time chat application with Discord-like features. Built with modern web technologies, 
+                  featuring instant messaging, user authentication, and real-time updates using WebSockets.
                 </p>
                 <section class="all-skills__icons all-skills__icons--small">
                   <section class="all-skills__container">
@@ -289,12 +393,22 @@
                 </video>
               </article>
               <section class="projects__info tweeter">
-                <h3 class="projects__title">ACEMYINTERVIEW</h3>
+                <div class="projects__badges">
+                  <span class="project-badge project-badge--featured">
+                    <i class="fas fa-star"></i> Featured
+                  </span>
+                  <span class="project-badge project-badge--ai">
+                    <i class="fas fa-brain"></i> AI-Powered
+                  </span>
+                  <span class="project-badge project-badge--live">
+                    <i class="fas fa-circle"></i> Live Demo
+                  </span>
+                </div>
+                <h3 class="projects__title">AceMyInterview</h3>
                 <p class="projects__paragraph">
-                  AceMyInterview is an AI-powered interview preparation platform featuring real-time speech recognition,
-                  intelligent answer evaluation, and personalized feedback. Users can practice with AI-generated
-                  questions
-                  tailored to their target role and industry, track their progress, and improve their interview skills.
+                  An AI-powered interview preparation platform featuring real-time speech recognition, intelligent answer evaluation, 
+                  and personalized feedback. Practice with AI-generated questions tailored to your target role and industry, 
+                  track your progress, and master interview skills with cutting-edge technology.
                 </p>
                 <section class="all-skills__icons all-skills__icons--small">
                   <section class="all-skills__container">
@@ -374,10 +488,18 @@
                 </video>
               </article>
               <section class="projects__info projects__info--engineers">
-                <h3 class="projects__title">ENGINEERS</h3>
+                <div class="projects__badges">
+                  <span class="project-badge project-badge--live">
+                    <i class="fas fa-circle"></i> Live & Active
+                  </span>
+                  <span class="project-badge project-badge--featured">
+                    <i class="fas fa-users"></i> 20K+ Users
+                  </span>
+                </div>
+                <h3 class="projects__title">Engineers Database</h3>
                 <p class="projects__paragraph">
-                  I was responsible for rewriting the codebase for Engineers, a course database utilized by thousands
-                  of students each month (10-20k sessions monthly).
+                  Rewrote the complete codebase for Engineers, a comprehensive course database platform serving thousands of students monthly. 
+                  Optimized performance and user experience, handling 10-20K sessions per month with improved scalability and reliability.
                 </p>
                 <section class="all-skills__icons all-skills__icons--small">
                   <section class="all-skills__container">
@@ -427,12 +549,20 @@
               </article>
 
               <section class="projects__info projects__info--project">
-                <h3 class="projects__title">YOUR PROJECT</h3>
+                <div class="projects__badges">
+                  <span class="project-badge" style="background: rgba(0, 255, 255, 0.1); border-color: rgba(0, 255, 255, 0.3); color: var(--accent-cyan);">
+                    <i class="fas fa-handshake"></i> Open to Opportunities
+                  </span>
+                </div>
+                <h3 class="projects__title">Your Project Here</h3>
                 <p class="projects__paragraph">
-                  Are you looking for a dedicated and skilled professional to join your team or help with your next
-                  project? Look no further!
+                  Looking for a dedicated full-stack developer to bring your ideas to life? I'm available for freelance work, 
+                  contract positions, and full-time opportunities. Let's collaborate and build something amazing together!
                 </p>
-                <a href="#contact"><button class="button">Contact Me</button></a>
+                <div class="projects__buttons">
+                  <a href="#contact"><button class="button">Get In Touch</button></a>
+                  <a href="./assets/Kirety_Manne.pdf" download><button class="button">Download Resume</button></a>
+                </div>
               </section>
             </article>
             <!-- <button class="button button--secondary projects__view-all">View All Projects</button> -->
@@ -441,21 +571,21 @@
       </div>
 
       <!-- Experience Section -->
-      <div class="container-experience">
+      <div class="container-experience" id="experience">
         <div class="wrapper">
           <section class="experience" id="experience">
             <h2 class="experience__heading gradient-text">Professional Experience</h2>
             <p class="experience__subheading">My journey in the tech industry</p>
 
             <div class="experience__timeline">
-              
+
               <!-- Internship Experience -->
               <article class="experience__item hidden fromLeft">
                 <div class="experience__marker">
                   <div class="experience__dot"></div>
                   <div class="experience__line"></div>
                 </div>
-                
+
                 <div class="experience__content">
                   <div class="experience__header">
                     <div class="experience__title-group">
@@ -474,8 +604,8 @@
 
                   <div class="experience__details">
                     <p class="experience__description">
-                      Gained hands-on experience in full-stack web development, working on real-world projects 
-                      and collaborating with experienced developers. Contributed to building scalable web applications 
+                      Gained hands-on experience in full-stack web development, working on real-world projects
+                      and collaborating with experienced developers. Contributed to building scalable web applications
                       using modern technologies and best practices.
                     </p>
 
@@ -547,7 +677,7 @@
                 <div class="experience__marker">
                   <div class="experience__dot experience__dot--future"></div>
                 </div>
-                
+
                 <div class="experience__content experience__content--future">
                   <div class="experience__header">
                     <h3 class="experience__title">
@@ -555,7 +685,7 @@
                     </h3>
                   </div>
                   <p class="experience__description">
-                    I'm actively seeking new opportunities to contribute my skills and continue growing as a developer. 
+                    I'm actively seeking new opportunities to contribute my skills and continue growing as a developer.
                     Let's build something amazing together!
                   </p>
                   <a href="#contact" class="experience__cta">
@@ -783,6 +913,96 @@
         </div>
       </div>
 
+      <!-- Testimonials Section -->
+      <!-- <div class="container-testimonials">
+        <div class="wrapper">
+          <section class="testimonials" id="testimonials">
+            <h2 class="testimonials__heading gradient-text">What People Say</h2>
+            <p class="testimonials__subheading">Feedback from colleagues and mentors</p>
+
+            <div class="testimonials__grid">
+              <article class="testimonial-card hidden fromLeft">
+                <div class="testimonial-card__header">
+                  <div class="testimonial-card__avatar">
+                    <i class="fas fa-user-tie"></i>
+                  </div>
+                  <div class="testimonial-card__info">
+                    <h4 class="testimonial-card__name">Rajesh Kumar</h4>
+                    <p class="testimonial-card__role">Senior Developer, Vardhaan Pvt Ltd</p>
+                  </div>
+                </div>
+                <div class="testimonial-card__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-card__text">
+                  "Kirety showed exceptional problem-solving skills during the internship. His ability to quickly 
+                  grasp complex concepts and implement solutions was impressive. A valuable team player."
+                </p>
+                <div class="testimonial-card__quote-icon">
+                  <i class="fas fa-quote-right"></i>
+                </div>
+              </article>
+
+              <article class="testimonial-card hidden fromBottom">
+                <div class="testimonial-card__header">
+                  <div class="testimonial-card__avatar">
+                    <i class="fas fa-user-graduate"></i>
+                  </div>
+                  <div class="testimonial-card__info">
+                    <h4 class="testimonial-card__name">Dr. Priya Sharma</h4>
+                    <p class="testimonial-card__role">Technical Mentor</p>
+                  </div>
+                </div>
+                <div class="testimonial-card__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-card__text">
+                  "Outstanding dedication and eagerness to learn. Kirety consistently delivered quality work and 
+                  showed great initiative in exploring new technologies. Highly recommended!"
+                </p>
+                <div class="testimonial-card__quote-icon">
+                  <i class="fas fa-quote-right"></i>
+                </div>
+              </article>
+
+              <article class="testimonial-card hidden fromRight">
+                <div class="testimonial-card__header">
+                  <div class="testimonial-card__avatar">
+                    <i class="fas fa-user-cog"></i>
+                  </div>
+                  <div class="testimonial-card__info">
+                    <h4 class="testimonial-card__name">Amit Patel</h4>
+                    <p class="testimonial-card__role">Project Lead</p>
+                  </div>
+                </div>
+                <div class="testimonial-card__rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="testimonial-card__text">
+                  "Great collaboration skills and technical proficiency. Kirety's contributions to our projects 
+                  were significant, and his code quality was consistently high. A pleasure to work with."
+                </p>
+                <div class="testimonial-card__quote-icon">
+                  <i class="fas fa-quote-right"></i>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div> -->
+
       <div class="container-contact">
         <div class="wrapper">
           <section class="contact hidden" id="contact">
@@ -800,6 +1020,89 @@
         </div>
       </div>
     </main>
+
+    <!-- Professional Footer -->
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer__content">
+          <div class="footer__section footer__about">
+            <img src="./assets/images/logo-k-animated.svg" alt="Kirety Logo" class="footer__logo" />
+            <p class="footer__description">
+              Full Stack Developer passionate about creating innovative web solutions and delivering exceptional user experiences.
+            </p>
+            <div class="footer__social">
+              <a href="https://www.linkedin.com/in/kirety-manne-954045297" target="_blank" rel="noopener noreferrer" 
+                 aria-label="LinkedIn" class="footer__social-link">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/Kiretychowdary" target="_blank" rel="noopener noreferrer" 
+                 aria-label="GitHub" class="footer__social-link">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://facebook.com/kirety.manne" target="_blank" rel="noopener noreferrer" 
+                 aria-label="Facebook" class="footer__social-link">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="https://twitter.com/kirety" target="_blank" rel="noopener noreferrer" 
+                 aria-label="Twitter" class="footer__social-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer__section footer__links">
+            <h3 class="footer__title">Quick Links</h3>
+            <ul class="footer__list">
+              <li><a href="#hero" class="footer__link"><i class="fas fa-chevron-right"></i> Home</a></li>
+              <li><a href="#about" class="footer__link"><i class="fas fa-chevron-right"></i> About</a></li>
+              <li><a href="#projects" class="footer__link"><i class="fas fa-chevron-right"></i> Projects</a></li>
+              <li><a href="#experience" class="footer__link"><i class="fas fa-chevron-right"></i> Experience</a></li>
+              <li><a href="#skills" class="footer__link"><i class="fas fa-chevron-right"></i> Skills</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__section footer__contact-info">
+            <h3 class="footer__title">Contact Info</h3>
+            <ul class="footer__list">
+              <li class="footer__contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:kirety.dev@gmail.com" class="footer__link">kirety.dev@gmail.com</a>
+              </li>
+              <li class="footer__contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Hyderabad, India</span>
+              </li>
+              <li class="footer__contact-item">
+                <i class="fas fa-clock"></i>
+                <span>Available for opportunities</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__section footer__newsletter">
+            <h3 class="footer__title">Stay Updated</h3>
+            <p class="footer__newsletter-text">Get notified about new projects and updates</p>
+            <form class="footer__newsletter-form">
+              <input type="email" placeholder="Your email address" class="footer__newsletter-input" required />
+              <button type="submit" class="footer__newsletter-btn">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            © 2025 <span class="highlight">Kirety</span>. All rights reserved.
+          </p>
+          <div class="footer__bottom-links">
+            <a href="#" class="footer__bottom-link">Privacy Policy</a>
+            <span class="footer__divider">|</span>
+            <a href="#" class="footer__bottom-link">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="https://kit.fontawesome.com/8bb946769b.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>

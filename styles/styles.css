@@ -1,16 +1,21 @@
+@import url(./typography.css);
 @import url(./globals.css);
 @import url(./utils.css);
 @import url(./nav.css);
 @import url(./landing.css);
 @import url(./hero.css);
+@import url(./about.css);
 @import url(./projects.css);
+@import url(./projectsEnhanced.css);
 @import url(./experience.css);
 @import url(./skills.css);
+@import url(./testimonialsFooter.css);
 @import url(./contact.css);
 @import url(./animations.css);
 @import url(./loader.css);
 @import url(./enhancements.css);
 @import url(./advancedFeatures.css);
+@import url(./themeToggle.css);
 @import url(./mobile.css);
 @import url(./footballCursor.css);
 
